@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: jaffle_shop
+    database: hive_metastore
+    schema: dbt_vsacon
+    tables:
+      - name: customers
+      - name: stg_orders
+      - name: stripe_payments
+      #  loaded_at_field: _batched_at
+       # freshness:
+        #  warn_after: {count: 12, period: day}
+         # error_after: {count: 24, period: day}
